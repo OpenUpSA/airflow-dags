@@ -29,7 +29,8 @@ with DAG(
         image="openup/domain-scraper:latest",
         environment=environment,
         private_environment=private_environment,
-        command="poetry run scrapy crawl govza"
+        command="poetry run scrapy crawl govza",
+        force_pull=True,
     )
 
     t1
