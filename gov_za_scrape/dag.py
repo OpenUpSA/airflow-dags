@@ -29,7 +29,7 @@ with DAG(
         image="openup/domain-scraper:latest",
         environment=environment,
         private_environment=private_environment,
-        command="poetry run scrapy crawl govza -s JOBDIR=jobdir -s MEMUSAGE_ENABLED=True MEMUSAGE_WARNING_MB=500 -s MEMDEBUG_ENABLED=True",
+        command="poetry run scrapy crawl govza -s JOBDIR=jobdir -s MEMUSAGE_ENABLED=True -s MEMUSAGE_WARNING_MB=500 -s MEMDEBUG_ENABLED=True",
         force_pull=True,
     )
 
