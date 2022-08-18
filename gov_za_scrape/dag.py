@@ -4,9 +4,11 @@ from datetime import datetime
 from airflow.models import Variable
 
 with DAG(
-    'gov_za_scrape',
-    description='A simple tutorial DAG',
-    catchup=False,
+        'gov_za_scrape',
+        description='A simple tutorial DAG',
+        catchup=False,
+        max_active_runs=1,
+        schedule_interval="@weekly",
 ) as dag:
 
     environment = {
